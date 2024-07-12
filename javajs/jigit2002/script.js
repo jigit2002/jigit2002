@@ -172,49 +172,80 @@ if (index.charCodeAt(index) <= 97  ) {
 // var char = text.matchAll(new RegExm(word,"ig"));
 
 
-var strings = [];
-var numbers = [];
+// var strings = [];
+// var numbers = [];
 
-function processInput() {
-    var input = prompt("Qiymatni kiriting:");
+// function processInput() {
+//     var input = prompt("Qiymatni kiriting:");
 
-    if (!isNaN(input) && input.trim() !== "") {
-        numbers.push(Number(input));
-    } else {
-        strings.push(input);
-    }
+//     if (!isNaN(input) && input.trim() !== "") {
+//         numbers.push(Number(input));
+//     } else {
+//         strings.push(input);
+//     }
+// }
+
+// console.log("Strings:", strings);
+// console.log("Numbers:", numbers);
+
+
+// function convertCurrency(uzs) {
+//   const exchangeRates = {
+//       USD: 11380.00,
+//       EURO: 12450.00,
+//       RUB: 150.00,
+//       RUPIY: 145.00
+//   };
+
+//   let usd = uzs / exchangeRates.USD;
+//   let euro = uzs / exchangeRates.EURO;
+//   let rub = uzs / exchangeRates.RUB;
+//   let rupiy = uzs / exchangeRates.RUPIY;
+
+//   return {
+//       USD: usd.toFixed(2),
+//       EURO: euro.toFixed(2),
+//       RUB: rub.toFixed(2),
+//       RUPIY: rupiy.toFixed(2)
+//   };
+// }
+
+// var uzs = prompt("UZS summasini kiriting:");
+// let converted = convertCurrency(Number(uzs));
+
+// console.log(`UZS: ${uzs}`);
+// console.log(`USD: ${converted.USD}`);
+// console.log(`EURO: ${converted.EURO}`);
+// console.log(`RUB: ${converted.RUB}`);
+// console.log(`RUPIY: ${converted.RUPIY}`);
+
+// var text = prompt("Matn kiriting") 
+// var type = prompt("Index kiriting")
+
+var prompts = prompt("arrayga method kiriting");
+
+var arr = ["Damas", "mers", "jiguli", "maybach", "captiva", "Cobolt", "BWD", "KY"];
+
+if (prompts == "length") {
+  console.log(arr.length);
+}else if (prompts == "splice()"){
+  console.log(arr.splice(0 ,7,)); 
+}else if (prompts == "push()"){
+  console.log(arr.push("Isuzi")); 
+}else if (prompts == "pop()"){
+  console.log(arr.pop("")); 
+}else if (prompts == "toString()"){
+  console.log(arr.toString());
+}else if (prompts == "at()"){
+  console.log(arr.at("6"));
+}else if (prompts == "join()"){
+  console.log(arr.join("$"));
+}else if (prompts == "shift()"){
+  console.log(arr.shift());
+}else if (prompts == "unshift()"){
+  console.log(arr.unshift("Treccer", "Nexiya3"));
+}else if (prompts == "toSpliced()"){
+  console.log(arr.toSpliced(0,5));
+}else if (prompts == "slice()"){
+  console.log(arr.slice(2));
 }
-
-console.log("Strings:", strings);
-console.log("Numbers:", numbers);
-
-
-function convertCurrency(uzs) {
-  const exchangeRates = {
-      USD: 11380.00,
-      EURO: 12450.00,
-      RUB: 150.00,
-      RUPIY: 145.00
-  };
-
-  let usd = uzs / exchangeRates.USD;
-  let euro = uzs / exchangeRates.EURO;
-  let rub = uzs / exchangeRates.RUB;
-  let rupiy = uzs / exchangeRates.RUPIY;
-
-  return {
-      USD: usd.toFixed(2),
-      EURO: euro.toFixed(2),
-      RUB: rub.toFixed(2),
-      RUPIY: rupiy.toFixed(2)
-  };
-}
-
-var uzs = prompt("UZS summasini kiriting:");
-let converted = convertCurrency(Number(uzs));
-
-console.log(`UZS: ${uzs}`);
-console.log(`USD: ${converted.USD}`);
-console.log(`EURO: ${converted.EURO}`);
-console.log(`RUB: ${converted.RUB}`);
-console.log(`RUPIY: ${converted.RUPIY}`);
