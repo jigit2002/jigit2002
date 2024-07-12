@@ -248,4 +248,6 @@ if (prompts == "length") {
   console.log(arr.toSpliced(0,5));
 }else if (prompts == "slice()"){
   console.log(arr.slice(2));
+}else{
+  console.log("xato");
 }
